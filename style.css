@@ -1,0 +1,286 @@
+*{
+    margin-top: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    scroll-behavior: smooth;
+}
+:root{
+    --text-color1: #40A2D8;
+    --text-color2: #eafbfb;
+    --shadow: #40A2D8;
+    --big-text: 2.5em;
+    --medium-text: 1.5em;
+    --normal-text: 1em;
+    --bg: #010215;
+    --small-text: 14px;
+}
+
+body{
+    background-color: var(--bg);
+}
+h1{
+    color: var(--text-color1);
+    font-size: var(--big-text);
+}
+span{
+    color: var(--text-color2);
+    font-size: var(--normal-text);
+}
+p{
+    color: var(--text-color2);
+    font-size: var(--normal-text);
+}
+nav{
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 4em;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 3%;
+    background: linear-gradient(#010215f3, #010215df);
+    backdrop-filter: blur(1px);
+    justify-content: space-between;
+    box-shadow: 0 2px 3px  var(--shadow);
+    width: 80%;
+    font-family: monospace;
+    border-radius: 30px;
+}
+navbar{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+navbar a{
+    color: var(--text-color1);
+    font-size: var(--medium-text);
+    text-decoration: none;
+    font-weight: 400; 
+    transition: 0.7s;
+
+}
+navbar a:hover, nav button:hover{
+    transition: 0.7s;
+    color: var(--text-color2);
+}
+.logo{
+    font-size: var(--medium-text);
+    color: var(--text-color2);
+}
+.btn{
+    display: none;
+}
+/* ================================HOME============================= */
+
+.home{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 10%;
+    height: 70dvh;
+    text-align: center;
+}
+.home .hire{
+    height: 40px;
+    gap: 20px;
+    margin-top: 2em;
+}
+.home .hire a{
+    height: 100%;
+    background-color: var(--bg);
+    box-shadow: 2px 0 4px #40A2D8;
+    padding: 10px;
+    color: var(--text-color1);
+    text-decoration: none;
+    transition: 0.6s;
+}
+.home .hire a:hover{
+    background-color: var(--shadow);
+    color: var(--bg);
+    transition: 1s;
+    font-weight: 600;
+}
+.home .chat{
+    box-shadow: 0 3px 8px #40A2D8;
+    font-size: var(--big-text);
+    height: 40px;
+    width: 80px;
+    bottom: 1.5em;
+    font-size: 1.5em;
+    position: fixed;
+    color: var(--text-color1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: .7em;
+    background-color: var(--bg);
+    border-radius: 6px;
+    cursor: pointer;
+}
+.home .message{
+    position: absolute;
+    width: 300px;
+    height: 0;
+    right: 1em;
+    transition: 0.5s;
+    overflow: hidden;
+    background-color: var(--bg);
+    box-shadow: 0 0 .4em #40A2D8;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    bottom: 7em;
+}
+.message .message-wrap{
+    padding: 10px;
+}
+#close{
+    font-size: var(--medium-text);
+    position: absolute;
+    color: var(--text-color1);
+    right: 10px;
+    padding: 0 10px;
+    text-decoration: none;
+}
+.inputdata{
+    position: absolute;
+    bottom: .8em;
+    right: 0;
+    width: 100%;
+    left: 0;
+    margin: auto;
+}
+.inputdata input{
+    background-color: #010215;
+    border: none;
+    border-bottom: 1px solid #40A2D8;
+    outline: none;
+    padding: 3px 5px;
+    color: var(--text-color2);
+    font-weight: normal;
+}
+.inputdata input[type="submit"]{
+    cursor: pointer;
+    color: var(--text-color2);
+}
+.usercontent{
+    display: grid;
+    gap: 10px;
+    height: auto;
+    padding: 30px 0 ;
+}
+.usercontent i{
+    color: var(--text-color1);
+}
+.user1{
+    display: block;
+    text-align: left;
+    padding: 1px 100px 30px 5px;
+    height: auto;
+    max-width: 200px;
+}
+.user2{
+   display: block;
+   text-align: right;
+   padding: 1px 5px 3px 100px;
+   height: auto;
+}
+.user-wrap{
+    width: 100%;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 700px){
+    navbar{
+        position: absolute;
+        top: 4.5em;
+        display: block;
+        width: 250px;
+        right: 10px;
+        height: 0;
+        overflow: hidden;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        transition: 0.7s height;
+        border-radius: 10px;
+        background: linear-gradient( #010215f3, #010215df);
+        box-shadow:  0 2px 5px #40A2D8;
+    }
+    nav{
+        width: 90%;
+        padding:  12px 5%;
+        top: 3em;
+    }
+    .active{
+        height: 200px;
+        transition: 0.7s height;
+    }
+    button{
+        background: transparent;
+        font-size: 1.3em;
+        color: var(--text-color1);
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+    navbar li a{
+        display: block;
+        font-size: var(--small-text);
+        padding: 15px;
+    }
+    .btn{
+        display: block;
+    }
+    .logo{
+        font-size: var(--small-text);
+        color: var(--text-color2);
+    }
+    
+}
+@media screen and (max-width: 400px) {
+    
+
+    nav{
+        width: 95%;
+        padding:  12px 5%;
+        top: 2.5em;
+    }
+    p{
+        color: var(--text-color2);
+        font-size: var(--small-text);
+    }
+    h1{
+        color: var(--text-color1);
+        font-size: var(--medium-text);
+    }
+    .home{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 2.5%;
+    }
+
+}
